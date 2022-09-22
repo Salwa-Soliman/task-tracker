@@ -1,3 +1,10 @@
-<header class="bg-light bg-opacity-25 d-flex justify-content-between px-4 py-3">
+<header
+  class="bg-light bg-opacity-25 d-flex justify-content-between align-items-center px-4 py-3"
+>
   <h1 class="text-light">{{ title }}</h1>
+  <app-button
+    text="Toggle Form"
+    classes="btn-outline-info"
+    (onClick)="toggleFormHandler()"
+  ></app-button>
 </header>

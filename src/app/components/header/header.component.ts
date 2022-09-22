@@ -10,4 +10,7 @@ export class HeaderComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+  toggleFormHandler() {
+    console.log('first');
+  }
 }
