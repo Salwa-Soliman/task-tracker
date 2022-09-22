@@ -1,0 +1,7 @@
+<li class="d-flex mb-2 align-items-baseline">
+  <input type="checkbox" [checked]="task.isCompleted" [id]="uid" />
+  <div class="d-flex flex-column ms-2">
+    <label [for]="uid" class="fw-semibold">{{ task.title }}</label>
+    <small class="text-secondary fst-italic">{{ task.dayCreated }}</small>
+  </div>
+</li>

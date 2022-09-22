@@ -1,0 +1,10 @@
+<div
+  class="mt-4 d-flex flex-column flex-lg-row align-items-center align-items-lg-start justify-content-center justify-content-lg-around"
+>
+  <app-task-list
+    *ngFor="let list of lists"
+    [items]="list.items"
+    [title]="list.title"
+    title="Completed"
+  ></app-task-list>
+</div>

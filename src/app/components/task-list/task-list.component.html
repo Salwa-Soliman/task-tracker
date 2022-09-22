@@ -1,0 +1,6 @@
+<div class="bg-info bg-opacity-10 p-3 list-wrapper my-4 rounded-3">
+  <h4 class="text-capitalize text-center mb-3">{{ title }}</h4>
+  <ul class="list-unstyled list-group">
+    <app-task-item *ngFor="let task of items" [task]="task"></app-task-item>
+  </ul>
+</div>
