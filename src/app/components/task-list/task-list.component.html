@@ -1,6 +1,17 @@
-<div class="bg-info bg-opacity-10 p-3 list-wrapper my-4 rounded-3">
-  <h4 class="text-capitalize text-center mb-3">{{ title }}</h4>
-  <ul class="list-unstyled list-group">
-    <app-task-item *ngFor="let task of items" [task]="task"></app-task-item>
-  </ul>
+<div
+  class="container mt-4 d-flex flex-column flex-lg-row align-items-center align-items-lg-start justify-content-center justify-content-lg-around"
+>
+  <div
+    class="bg-info bg-opacity-25 p-3 list-wrapper my-4 rounded-3"
+    *ngFor="let list of lists"
+  >
+    <h4 class="text-capitalize text-center mb-3">{{ list.title }}</h4>
+    <ul class="list-unstyled list-group">
+      <app-task-item
+        *ngFor="let task of list.items"
+        [task]="task"
+        (onDeleteEmitter)="deleteTaskHandler(task)"
+      ></app-task-item>
+    </ul>
+  </div>
 </div>

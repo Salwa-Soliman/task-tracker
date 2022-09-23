@@ -1,5 +1,5 @@
 .list-wrapper {
-  box-shadow: 0 0 15px 3px rgba(93, 207, 248, 0.2);
+  box-shadow: 0 0 15px 3px rgba(93, 207, 248, 0.1);
   min-width: 300px;
   transition: 0.4s ease-in-out;
   -webkit-transition: 0.4s ease-in-out;

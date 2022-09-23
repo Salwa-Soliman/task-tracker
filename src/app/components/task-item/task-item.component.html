@@ -1,7 +1,18 @@
 <li class="d-flex mb-2 align-items-baseline">
-  <input type="checkbox" [checked]="task.isCompleted" [id]="uid" />
-  <div class="d-flex flex-column ms-2">
-    <label [for]="uid" class="fw-semibold">{{ task.title }}</label>
-    <small class="text-secondary fst-italic">{{ task.dayCreated }}</small>
+  <input type="checkbox" [checked]="task.isCompleted" [id]="task.id" />
+  <div
+    class="d-flex flex-grow-1 justify-content-between align-items-start px-2"
+  >
+    <label [for]="task.id" class="fw-semibold">{{ task.title }}</label>
+    <button
+      type="button"
+      class="btn text-danger fw-bold fs-6 p-1"
+      aria-label="Delete"
+      (click)="onDelete(task)"
+    >
+      x
+    </button>
   </div>
 </li>
+
+<!-- (click)="onDelete(task)" -->

@@ -1,0 +1,34 @@
+{
+  "tasks": [
+    {
+      "id": "1663791476716",
+      "title": "Learn Redux Toolkit",
+      "isCompleted": true
+    },
+    {
+      "id": "1663791487701",
+      "title": "Learn RTK Query",
+      "isCompleted": true
+    },
+    {
+      "id": "1663791497949",
+      "title": "Learn Thunks",
+      "isCompleted": true
+    },
+    {
+      "id": "1663791507667",
+      "title": "Feed Pets",
+      "isCompleted": true
+    },
+    {
+      "id": "1663791516425",
+      "title": "Learn React",
+      "isCompleted": false
+    },
+    {
+      "id": "1663812079704",
+      "title": "Meditate",
+      "isCompleted": false
+    }
+  ]
+}

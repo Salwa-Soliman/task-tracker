@@ -5,3 +5,8 @@ export default interface Task {
   dayCreated: string;
   time: string;
 }
+
+export interface List {
+  title: string;
+  items: Task[];
+}
