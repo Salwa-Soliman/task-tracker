@@ -1,0 +1,14 @@
+<form
+  (submit)="onSubmit()"
+  class="w-50 mx-auto d-flex flex-column align-items-center"
+>
+  <input
+    type="text"
+    class="form-control my-4"
+    id="floatingInputValue"
+    placeholder="Add new task"
+    name="new-task"
+    [(ngModel)]="inputValue"
+  />
+  <app-button text="Submit" classes="btn-outline-info"></app-button>
+</form>

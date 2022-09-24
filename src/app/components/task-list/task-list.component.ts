@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import Task, { List } from '../../types';
 import { TaskService } from './../../services/task.service';
 
@@ -11,9 +11,13 @@ export class TaskListComponent implements OnInit {
   tasks!: Task[];
   lists!: List[];
 
-  constructor(private taskService: TaskService) {}
+  constructor(private taskService: TaskService) {
+    console.log('ctor');
+  }
 
   ngOnInit(): void {
+    console.log('init task list');
+
     this.taskService.getTasks().subscribe((data) => {
       this.tasks = data;
       this.lists = this.filterTaskLists(this.tasks);
@@ -23,6 +27,12 @@ export class TaskListComponent implements OnInit {
   deleteTaskHandler(task: Task) {
     this.taskService.deleteTask(task.id).subscribe((_) => {
       this.tasks = this.tasks.filter((element) => element.id !== task.id);
+      this.lists = this.filterTaskLists(this.tasks);
+    });
+  }
+
+  updateTaskHandler(task: Task) {
+    this.taskService.updateTask(task).subscribe((_) => {
       this.lists = this.filterTaskLists(this.tasks);
     });
   }

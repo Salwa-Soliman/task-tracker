@@ -9,6 +9,7 @@ import Task from './../../types';
 export class TaskItemComponent implements OnInit {
   @Input() task!: Task;
   @Output() onDeleteEmitter: EventEmitter<Task> = new EventEmitter();
+  @Output() onUpdateEmitter: EventEmitter<Task> = new EventEmitter();
 
   constructor() {}
 
@@ -16,5 +17,10 @@ export class TaskItemComponent implements OnInit {
 
   onDelete(task: Task) {
     this.onDeleteEmitter.emit(task);
+  }
+
+  onUpdate(task: Task) {
+    this.task.isCompleted = !this.task.isCompleted;
+    this.onUpdateEmitter.emit(this.task);
   }
 }

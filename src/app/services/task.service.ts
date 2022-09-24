@@ -3,6 +3,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import Task from '../types';
 
+const httpOptions = new HttpHeaders({
+  'Content-Type': 'application/json',
+});
 @Injectable({ providedIn: 'root' })
 export class TaskService {
   private URL = 'http://localhost:5000/tasks';
@@ -16,11 +19,16 @@ export class TaskService {
     return this.httpClient.delete<Task>(`${this.URL}/${id}`);
   }
 
-  // updateTask(task: Task): Observable<ArrayBuffer> {
-  //   return this.httpClient.patch<ArrayBuffer>(
-  //     `${this.URL}/${task.id}`,
-  //     { ...task, isCompleted: !task.isCompleted },
-  //     { headers: this.headers }
-  //   );
-  // }
+  updateTask(updatedTask: Task): Observable<ArrayBuffer> {
+    return this.httpClient.put<ArrayBuffer>(
+      `${this.URL}/${updatedTask.id}`,
+      updatedTask
+    );
+  }
+
+  addTask(task: Task): Observable<Task> {
+    return this.httpClient.post<Task>(this.URL, task);
+  }
 }
+
+// httpOptions

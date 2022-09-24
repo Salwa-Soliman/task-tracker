@@ -3,8 +3,10 @@
 >
   <h2 class="text-light">{{ title }}</h2>
   <app-button
-    text="Toggle Form"
-    classes="btn-outline-info"
-    (onClick)="toggleFormHandler()"
+    [text]="btnText"
+    classes="btn-outline-warning"
+    (click)="toggleViewHandler()"
   ></app-button>
 </header>
+
+<!-- text="Toggle Form" -->

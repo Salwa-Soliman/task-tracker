@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name = '';
+  isAddingTask = false;
+  btnText: string = 'Add Task';
+
+  onToggleHandler() {
+    this.isAddingTask = !this.isAddingTask;
+
+    this.btnText = this.isAddingTask ? 'Track your Tasks' : 'Add Task';
+  }
 }
