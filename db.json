@@ -23,11 +23,21 @@
     {
       "id": "1663791516425",
       "title": "Learn React",
-      "isCompleted": false
+      "isCompleted": true
     },
     {
       "id": "1663978737125",
       "title": "test",
+      "isCompleted": true
+    },
+    {
+      "id": "1663979019742",
+      "title": "Learn ngrx",
+      "isCompleted": false
+    },
+    {
+      "id": "1664094821490",
+      "title": "Learn angular",
       "isCompleted": false
     }
   ]

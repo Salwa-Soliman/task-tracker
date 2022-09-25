@@ -11,13 +11,9 @@ export class TaskListComponent implements OnInit {
   tasks!: Task[];
   lists!: List[];
 
-  constructor(private taskService: TaskService) {
-    console.log('ctor');
-  }
+  constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {
-    console.log('init task list');
-
     this.taskService.getTasks().subscribe((data) => {
       this.tasks = data;
       this.lists = this.filterTaskLists(this.tasks);
